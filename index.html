@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff6f9e" />
+    <meta name="description" content="Un mini quiz de amor hecho con mucho cariño." />
+    <title>El quiz para mi mor ♡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="floating-heart heart-one">♡</div>
+      <div class="floating-heart heart-two">♡</div>
+      <div class="floating-heart heart-three">♥</div>
+
+      <section class="screen intro-screen is-active" id="intro-screen" aria-labelledby="intro-title">
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✧</div>
+        <div class="sticker" aria-hidden="true">💌</div>
+        <p class="eyebrow">hecho con amor para vos</p>
+        <h1 id="intro-title">EL QUIZ<br /><span>PARA MI MOR</span></h1>
+        <p class="intro-copy">A ver cuánto sabés de tu persona favorita...<br />Pista: la respuesta siempre es amor ♡</p>
+        <button class="primary-button" id="play-button" type="button">Play <span>♡</span></button>
+        <p class="tiny-note">5 preguntitas • 100% amor</p>
+      </section>
+
+      <section class="screen quiz-screen" id="quiz-screen" aria-labelledby="question-title" hidden>
+        <header class="quiz-header">
+          <button class="back-button" id="back-button" type="button" aria-label="Volver al inicio">←</button>
+          <div class="progress-copy"><span id="question-number">1</span> de 5</div>
+          <div class="mini-heart">♥</div>
+        </header>
+
+        <div class="progress-track" aria-label="Progreso del quiz">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="question-area">
+          <p class="question-kicker">preguntita <span id="question-kicker-number">01</span></p>
+          <h2 id="question-title"></h2>
+          <p class="question-hint">Elegí una opción, mi amor ♡</p>
+          <div class="answers" id="answers" role="group" aria-label="Opciones de respuesta"></div>
+          <p class="feedback" id="feedback" aria-live="polite"></p>
+          <button class="next-button" id="next-button" type="button" hidden>Siguiente ♡</button>
+        </div>
+
+        <div class="quiz-footer">
+          <span class="footer-heart">♡</span>
+          <span>solo hay una respuesta correcta...</span>
+          <span class="footer-heart">♡</span>
+        </div>
+      </section>
+
+      <section class="screen final-screen" id="final-screen" aria-labelledby="final-title" hidden>
+        <div class="confetti" aria-hidden="true">✦　♡　✧　♥　✦</div>
+        <div class="final-badge">🎀</div>
+        <p class="eyebrow">resultado oficial</p>
+        <h2 id="final-title">¡Lo sabía,<br /><span>sos mi persona!</span></h2>
+        <div class="letter-card">
+          <div class="letter-top">♡　 para mi mor　 ♡</div>
+          <p>Te extrañé y mucho mi vida, yo sé que soy complicado y solo voy a querer lo mejor para los 2.</p>
+          <p>Te pasaste de fuerte hoy, sos muy guapota, ¿sabías? Por eso te merecés esto y más, bb <span class="pink-heart">♥</span></p>
+          <p class="letter-closing">¡LO SABIA, sos re inteligente bb!</p>
+          <div class="letter-signature">con amor,<br />tu nachu</div>
+        </div>
+        <button class="secondary-button" id="restart-button" type="button">Jugar de nuevo ↻</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
